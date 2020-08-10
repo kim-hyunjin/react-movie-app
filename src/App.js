@@ -1,57 +1,37 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-function Food({name, rating}) {
-    return (
-        <div>
-            <h1>I like {name}</h1>
-            <h4>{rating}/5</h4>
-        </div>
-    )
-}
-
-Food.propTypes = {
-    name: PropTypes.string.isRequired,
-    rating: PropTypes.number
-}
-
-const foodILike = [
-    {
-        id: 1,
-        name: "Kimchi",
-        rating: 5
-    },
-    {
-        id: 2,
-        name: "Samgyeopsal",
-        rating: 4
-    },
-    {
-        id: 3,
-        name: "Bibimbap",
-        rating: 3
-    },
-    {
-        id: 4,
-        name: "Doncasu",
-        rating: 2
-    },
-    {
-        id: 5,
-        name: "Kimbap",
-        rating: "1"
+class App extends React.Component {
+    state = {
+        count: 0
+    };
+    add = () => {
+        // setState를 호출하면 새로 render function을 호출해줌
+        // 현재 state값을 알아서 넣어준다.
+        this.setState(current => ({ count: current.count + 1 }));
+    };
+    minus = () => {
+        this.setState(current => ({ count: current.count - 1 }));
+    };
+    componentDidMount() {
+        console.log("Component rendered");
     }
-];
-
-function App() {
-  return (
-      <div className="App">
-          {foodILike.map(dish => (
-              <Food key={dish.id} name={dish.name} rating={dish.rating} />
-          ))}
-      </div>
-
-  );
+    componentDidUpdate() {
+        console.log("I just updated");
+    }
+    componentWillUnmount() {
+        console.log("Goodbye, cruel world");
+    }
+    // Virtual DOM과 이전 DOM을 비교하여 변경된 부분만 새로 렌더링 해준다
+    render() {
+        console.log("I'm rendering");
+        return (
+            <div>
+                <h1>The number is: {this.state.count}</h1>
+                <button onClick={this.add}>Add</button>
+                <button onClick={this.minus}>Minus</button>
+            </div>
+        );
+    }
 }
 
 export default App;
