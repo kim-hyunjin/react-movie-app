@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba62aed1-df6b-4317-8cb5-7b36e314311e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Movie.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597042187802</updated>
-      <workItem from="1597042189527" duration="6799000" />
+      <workItem from="1597042189527" duration="7104000" />
     </task>
     <task id="LOCAL-00001" summary="JSX + Props">
       <created>1597049037072</created>
@@ -102,7 +99,21 @@
       <option name="project" value="LOCAL" />
       <updated>1597051897292</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="styling movies list and adding genres">
+      <created>1597053021667</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1597053021667</updated>
+    </task>
+    <task id="LOCAL-00006" summary="styling movies list more">
+      <created>1597053188702</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1597053188702</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,17 +124,19 @@
     <MESSAGE value="PropTypes" />
     <MESSAGE value="class components and state, component life cycle" />
     <MESSAGE value="Fetching Movies from API with axios and rendering" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fetching Movies from API with axios and rendering" />
+    <MESSAGE value="styling movies list and adding genres" />
+    <MESSAGE value="styling movies list more" />
+    <option name="LAST_COMMIT_MESSAGE" value="styling movies list more" />
   </component>
   <component name="WindowStateProjectService">
     <state x="580" y="528" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597048468447">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
     <state x="580" y="528" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/62.0.2498.1440/3840.-3.2560.1440@62.0.2498.1440" timestamp="1597048468447" />
-    <state x="209" y="188" width="1296" height="1043" key="CommitChangelistDialog2" timestamp="1597051896458">
+    <state x="209" y="188" width="1296" height="1043" key="CommitChangelistDialog2" timestamp="1597053187846">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
-    <state x="209" y="188" width="1296" height="1043" key="CommitChangelistDialog2/62.0.2498.1440/3840.-3.2560.1440@62.0.2498.1440" timestamp="1597051896458" />
+    <state x="209" y="188" width="1296" height="1043" key="CommitChangelistDialog2/62.0.2498.1440/3840.-3.2560.1440@62.0.2498.1440" timestamp="1597053187846" />
     <state x="468" y="459" key="Vcs.Push.Dialog.v2" timestamp="1597051368945">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
