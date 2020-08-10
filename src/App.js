@@ -1,34 +1,43 @@
 import React from 'react';
+import axios from 'axios';
+import Movie from "./Movie";
+
 
 class App extends React.Component {
     state = {
-        count: 0
+        isLoading: true,
+        movies: []
     };
-    add = () => {
-        // setState를 호출하면 새로 render function을 호출해줌
-        // 현재 state값을 알아서 넣어준다.
-        this.setState(current => ({ count: current.count + 1 }));
-    };
-    minus = () => {
-        this.setState(current => ({ count: current.count - 1 }));
-    };
+    getMovies = async () => {
+        const {
+            data: {
+                data: { movies }
+            }
+        } = await axios.get(
+            "https://yts-proxy.now.sh/list_movies.json?sort_by=rating"
+        );
+        this.setState({ movies, isLoading: false });
+    }
     componentDidMount() {
-        console.log("Component rendered");
+        this.getMovies();
     }
-    componentDidUpdate() {
-        console.log("I just updated");
-    }
-    componentWillUnmount() {
-        console.log("Goodbye, cruel world");
-    }
-    // Virtual DOM과 이전 DOM을 비교하여 변경된 부분만 새로 렌더링 해준다
+
     render() {
-        console.log("I'm rendering");
+        const { isLoading, movies } = this.state;
         return (
             <div>
-                <h1>The number is: {this.state.count}</h1>
-                <button onClick={this.add}>Add</button>
-                <button onClick={this.minus}>Minus</button>
+                {isLoading
+                    ? "Loading..."
+                    : movies.map(movie => (
+                        <Movie
+                            key={movie.id}
+                            id={movie.id}
+                            year={movie.year}
+                            title={movie.title}
+                            summary={movie.summary}
+                            poster={movie.medium_cover_image}
+                        />
+                    ))}
             </div>
         );
     }
